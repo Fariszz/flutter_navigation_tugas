@@ -5,9 +5,20 @@ class HomePage extends StatelessWidget {
 
   final List<Product> products = [
     Product(
-        name: "Paracetamol", stok: 25, price: 1500, image: '/assets/images/paracetamol.jpg'),
-    Product(name: "Mixagrip", stok: 20, price: 1000, image: '/assets/images/mixagrip.jpg'),
-    Product(name: "Antangin", stok: 15, price: 1500, image: '/assets/images/antangin.jpg'),
+        name: "Paracetamol",
+        stok: 25,
+        price: 1500,
+        image: 'assets/images/paracetamol.jpg'),
+    Product(
+        name: "Mixagrip",
+        stok: 20,
+        price: 1000,
+        image: 'assets/images/mixagrip.jpg'),
+    Product(
+        name: "Antangin",
+        stok: 15,
+        price: 1500,
+        image: 'assets/images/antangin.jpg'),
   ];
 
   @override
@@ -25,7 +36,7 @@ class HomePage extends StatelessWidget {
               final product = products[index];
               return InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/product', arguments: product);
+                  Navigator.pushNamed(context, '/products', arguments: product);
                 },
                 child: Container(
                   margin: EdgeInsets.all(20),
@@ -37,7 +48,7 @@ class HomePage extends StatelessWidget {
                                   fontSize: 20, fontWeight: FontWeight.w300))),
                       Expanded(
                           child: Text(
-                        product.price.toString(),
+                        "Rp. " + product.price.toString(),
                         style: const TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w300),
                         textAlign: TextAlign.end,
