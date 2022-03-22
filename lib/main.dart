@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage()
+        '/': (context) => HomePage(),
+        '/products': (context) => DetailScreen()
       },
     );
   }
